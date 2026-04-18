@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Skill</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container d-flex justify-content-between">
+        
+        <a class="navbar-brand" href="index.html">SkillSwap</a>
+
+        <div class="ms-auto">
+            <a href="index.html" class="btn btn-light me-2">Home</a>
+            <a href="add.html" class="btn btn-success me-2">Add Skill</a>
+            <a href="view.html" class="btn btn-info me-2">View Users</a>
+            <a href="register.html" class="btn btn-warning me-2">Register</a>
+            <a href="login.html" class="btn btn-primary me-2">Login</a>
+
+            <!-- 🌙 Dark Mode -->
+            <button class="btn btn-light" onclick="toggleDarkMode()">🌙</button>
+        </div>
+
+    </div>
+</nav>
+
+<!-- Form Section -->
+<div class="container mt-5 d-flex justify-content-center">
+     <div class="card p-4 shadow mx-auto" style="max-width: 450px; border-radius: 15px;" data-aos="zoom-in">
+        <h3 class="text-center mb-3">Add Your Skills</h3>
+
+        <form id="skillForm" class="p-2">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" id="name" class="form-control mb-3" placeholder="Enter your name" required>
+            <input type="email" id="email" class="form-control mb-3" placeholder="Enter your email" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Skill You Can Teach</label>
+            <input type="text" id="teach" class="form-control mb-3" placeholder="Skill you can teach" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Skill You Want to Learn</label>
+            <input type="text" id="learn" class="form-control mb-3" placeholder="Skill you want to learn" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary  w-100 mt-2">Submit</button>
+    </form>
+</div>
+</div>
+<script src="script.js"></script>
+<script>
+function toggleDarkMode(){
+    document.body.classList.toggle("bg-dark");
+}
+</script>
+
+</body>
+</html>    
